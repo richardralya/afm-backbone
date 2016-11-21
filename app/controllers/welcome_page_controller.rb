@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class WelcomePageController < ApplicationController
   def welcome
   end
 end
