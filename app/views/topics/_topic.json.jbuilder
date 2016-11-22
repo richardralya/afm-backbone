@@ -1,2 +1,2 @@
-json.extract! topic, :id, :channel_id, :org_id, :user_id, :name, :content, :is_private, :topic_type, :media_link, :start_date, :end_date, :deadline_date, :date_created, :date_modified, :status, :created_at, :updated_at
+json.extract! topic, :id, :channel_id, :org_id, :user_id, :name, :content, :is_private, :topic_type, :media_link, :start_date, :end_date, :deadline_date, :status, :created_at, :updated_at
 json.url topic_url(topic, format: :json)
