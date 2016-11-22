@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address: MyText
+  register_date: 2016-11-22 08:13:08
+  plan: MyString
+  status: 1
+
+two:
+  name: MyString
+  address: MyText
+  register_date: 2016-11-22 08:13:08
+  plan: MyString
+  status: 1

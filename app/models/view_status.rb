@@ -1,0 +1,2 @@
+class ViewStatus < ApplicationRecord
+end

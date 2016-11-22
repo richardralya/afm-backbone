@@ -1,0 +1,87 @@
+<%= form_for(topic) do |f| %>
+  <% if topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+
+      <ul>
+      <% topic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :channel_id %>
+    <%= f.number_field :channel_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :org_id %>
+    <%= f.number_field :org_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :is_private %>
+    <%= f.check_box :is_private %>
+  </div>
+
+  <div class="field">
+    <%= f.label :topic_type %>
+    <%= f.text_field :topic_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :media_link %>
+    <%= f.text_field :media_link %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.datetime_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.datetime_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :deadline_date %>
+    <%= f.datetime_select :deadline_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_created %>
+    <%= f.datetime_select :date_created %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_modified %>
+    <%= f.datetime_select :date_modified %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.number_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

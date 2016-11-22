@@ -1,0 +1,1 @@
+json.partial! "view_statuses/view_status", view_status: @view_status

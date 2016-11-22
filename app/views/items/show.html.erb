@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @item.topic_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @item.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @item.content %>
+</p>
+
+<p>
+  <strong>Media link:</strong>
+  <%= @item.media_link %>
+</p>
+
+<p>
+  <strong>Critera count:</strong>
+  <%= @item.critera_count %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @item.date_created %>
+</p>
+
+<p>
+  <strong>Date modified:</strong>
+  <%= @item.date_modified %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @item.status %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

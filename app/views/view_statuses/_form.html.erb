@@ -1,0 +1,32 @@
+<%= form_for(view_status) do |f| %>
+  <% if view_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(view_status.errors.count, "error") %> prohibited this view_status from being saved:</h2>
+
+      <ul>
+      <% view_status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :item_id %>
+    <%= f.number_field :item_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.number_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

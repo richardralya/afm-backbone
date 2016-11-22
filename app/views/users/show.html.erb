@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @user.language %>
+</p>
+
+<p>
+  <strong>Timezone:</strong>
+  <%= @user.timezone %>
+</p>
+
+<p>
+  <strong>Auth type:</strong>
+  <%= @user.auth_type %>
+</p>
+
+<p>
+  <strong>Account status:</strong>
+  <%= @user.account_status %>
+</p>
+
+<p>
+  <strong>Login status:</strong>
+  <%= @user.login_status %>
+</p>
+
+<p>
+  <strong>Organic rank:</strong>
+  <%= @user.organic_rank %>
+</p>
+
+<p>
+  <strong>Rank boost:</strong>
+  <%= @user.rank_boost %>
+</p>
+
+<p>
+  <strong>Org:</strong>
+  <%= @user.org_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @user.status %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @user.date_created %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

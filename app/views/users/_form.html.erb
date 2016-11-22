@@ -1,0 +1,77 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </div>
+
+  <div class="field">
+    <%= f.label :timezone %>
+    <%= f.text_field :timezone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :auth_type %>
+    <%= f.text_field :auth_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :account_status %>
+    <%= f.text_field :account_status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :login_status %>
+    <%= f.number_field :login_status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :organic_rank %>
+    <%= f.text_field :organic_rank %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rank_boost %>
+    <%= f.text_field :rank_boost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :org_id %>
+    <%= f.number_field :org_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.number_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_created %>
+    <%= f.datetime_select :date_created %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

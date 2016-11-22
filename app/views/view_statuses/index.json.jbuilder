@@ -1,0 +1,1 @@
+json.array! @view_statuses, partial: 'view_statuses/view_status', as: :view_status

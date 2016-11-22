@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @criterium.item_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @criterium.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @criterium.content %>
+</p>
+
+<p>
+  <strong>Cardinality:</strong>
+  <%= @criterium.cardinality %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @criterium.status %>
+</p>
+
+<%= link_to 'Edit', edit_criterium_path(@criterium) %> |
+<%= link_to 'Back', criteria_path %>

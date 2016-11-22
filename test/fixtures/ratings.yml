@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  criteria_id: 1
+  user_id: 1
+  user_rank: 9.99
+  rating: 1
+  date_created: 2016-11-22 08:30:46
+  date_modified: 2016-11-22 08:30:46
+  status: 1
+
+two:
+  criteria_id: 1
+  user_id: 1
+  user_rank: 9.99
+  rating: 1
+  date_created: 2016-11-22 08:30:46
+  date_modified: 2016-11-22 08:30:46
+  status: 1

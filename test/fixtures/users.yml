@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  language: MyString
+  timezone: MyString
+  auth_type: MyString
+  account_status: MyString
+  login_status: 1
+  organic_rank: 9.99
+  rank_boost: 9.99
+  org_id: 1
+  status: 1
+  date_created: 2016-11-22 08:11:35
+
+two:
+  name: MyString
+  email: MyString
+  language: MyString
+  timezone: MyString
+  auth_type: MyString
+  account_status: MyString
+  login_status: 1
+  organic_rank: 9.99
+  rank_boost: 9.99
+  org_id: 1
+  status: 1
+  date_created: 2016-11-22 08:11:35

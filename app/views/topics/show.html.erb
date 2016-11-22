@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Channel:</strong>
+  <%= @topic.channel_id %>
+</p>
+
+<p>
+  <strong>Org:</strong>
+  <%= @topic.org_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @topic.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @topic.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @topic.content %>
+</p>
+
+<p>
+  <strong>Is private:</strong>
+  <%= @topic.is_private %>
+</p>
+
+<p>
+  <strong>Topic type:</strong>
+  <%= @topic.topic_type %>
+</p>
+
+<p>
+  <strong>Media link:</strong>
+  <%= @topic.media_link %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @topic.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @topic.end_date %>
+</p>
+
+<p>
+  <strong>Deadline date:</strong>
+  <%= @topic.deadline_date %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @topic.date_created %>
+</p>
+
+<p>
+  <strong>Date modified:</strong>
+  <%= @topic.date_modified %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @topic.status %>
+</p>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>
