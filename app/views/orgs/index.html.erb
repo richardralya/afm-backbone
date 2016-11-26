@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Channel ID</th>
       <th>Name</th>
       <th>Address</th>
       <th>Register date</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @orgs.each do |org| %>
       <tr>
+        <td><%= org.channel_id %></td>
         <td><%= org.name %></td>
         <td><%= org.address %></td>
         <td><%= org.plan %></td>
