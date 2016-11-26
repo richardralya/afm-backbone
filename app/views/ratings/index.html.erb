@@ -5,7 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Criteria</th>
+      <th>Item</th>
+      <th>Criterium</th>
       <th>User</th>
       <th>User rank</th>
       <th>Rating</th>
@@ -19,7 +20,8 @@
   <tbody>
     <% @ratings.each do |rating| %>
       <tr>
-        <td><%= rating.criteria_id %></td>
+        <td><%= rating.item_id %></td>
+        <td><%= rating.criterium_id %></td>
         <td><%= rating.user_id %></td>
         <td><%= rating.user_rank %></td>
         <td><%= rating.rating %></td>
