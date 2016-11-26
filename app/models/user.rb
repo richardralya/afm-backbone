@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  belongs_to :channel  
   belongs_to :org
   
   has_many :topics
