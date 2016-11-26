@@ -17,12 +17,10 @@ ActiveRecord::Schema.define(version: 20161122183046) do
     t.text     "content"
     t.text     "ui_content"
     t.boolean  "is_private"
-    t.datetime "date_modified"
-    t.datetime "date_created"
     t.integer  "user_id"
     t.integer  "status"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "criteria", force: :cascade do |t|
@@ -42,33 +40,30 @@ ActiveRecord::Schema.define(version: 20161122183046) do
     t.text     "content"
     t.string   "media_link"
     t.integer  "critera_count"
-    t.datetime "date_created"
-    t.datetime "date_modified"
     t.integer  "status"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "orgs", force: :cascade do |t|
+    t.integer  "channel_id"
     t.string   "name"
     t.text     "address"
-    t.datetime "register_date"
     t.string   "plan"
     t.integer  "status"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.integer  "criteria_id"
+    t.integer  "item_id"
+    t.integer  "criterium_id"
     t.integer  "user_id"
     t.decimal  "user_rank"
     t.integer  "rating"
-    t.datetime "date_created"
-    t.datetime "date_modified"
     t.integer  "status"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "topics", force: :cascade do |t|
@@ -83,8 +78,6 @@ ActiveRecord::Schema.define(version: 20161122183046) do
     t.datetime "start_date"
     t.datetime "end_date"
     t.datetime "deadline_date"
-    t.datetime "date_created"
-    t.datetime "date_modified"
     t.integer  "status"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -102,7 +95,6 @@ ActiveRecord::Schema.define(version: 20161122183046) do
     t.decimal  "rank_boost"
     t.integer  "org_id"
     t.integer  "status"
-    t.datetime "date_created"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
