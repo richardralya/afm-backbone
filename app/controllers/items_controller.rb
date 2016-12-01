@@ -4,21 +4,25 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
+    @Title = "unsensational! links"
     @items = Item.all
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
+    @Title = "unsensational! link"
   end
 
   # GET /items/new
   def new
+    @Title = "NEW unsensational! link"
     @item = Item.new
   end
 
   # GET /items/1/edit
   def edit
+    @Title = "EDIT unsensational! link"
   end
 
   # POST /items

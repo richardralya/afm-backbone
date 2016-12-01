@@ -1,6 +1,4 @@
 class Item < ApplicationRecord  
-  belongs_to :channel
-  belongs_to :org
   belongs_to :user
   belongs_to :topic
   
