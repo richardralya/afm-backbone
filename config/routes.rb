@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
+  get 'pages/item'
+
+  get 'pages/profile'
+
   resources :ratings
   resources :criteria
   resources :view_statuses
@@ -7,6 +13,6 @@ Rails.application.routes.draw do
   resources :channels
   resources :orgs
   resources :users
-  get 'welcome_page/Welcome'
-  root 'welcome_page#welcome'
+  get 'items/Index'
+  root 'items#index'
 end
