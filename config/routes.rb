@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get 'items/Index'
 
   get 'welcome_page/Welcome'
+  
   root 'welcome_page#welcome'
 end

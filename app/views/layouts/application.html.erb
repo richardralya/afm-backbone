@@ -3,12 +3,37 @@
   <head>
     <title><%= @Title %></title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>	
+	<![endif]-->
+    <%= stylesheet_link_tag    'blueprint/screen', media: 'screen' %>
+    <%= stylesheet_link_tag    'blueprint/print', media: 'print' %>
+	<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+    <%= stylesheet_link_tag    'custom', media: 'screen' %>
   </head>
 
   <body>
-    <%= yield %>
+	  
+	  <div class="container">
+		  
+		  <header>
+			  <%= link_to image_tag("logo-med.png", :alt => "unsensational Logo", :class => "round"), '../' %>
+		  </header>
+		  
+		  <section class="round">
+			  <%= yield %>
+		  </section>
+		  
+		  <footer>
+			  <nav class="round">
+				<div><%= link_to image_tag("logo-brick.png", :alt => "unsensational Logo", :class => "round"), '../' %></div>
+				<div class="deadlinks"><%= link_to "Manage Users", '/users' %></div>
+				<div class="deadlinks"><%= link_to "Manage Items", '/items' %></div>
+				<div class="deadlinks"><%= link_to "Manage Criteria", '/criteria' %></div>
+			  </nav>
+		  </footer>
+		  
+	  </div>
+	  
   </body>
 </html>
