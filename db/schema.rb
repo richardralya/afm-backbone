@@ -34,12 +34,11 @@ ActiveRecord::Schema.define(version: 20161122183046) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.integer  "topic_id"
+    t.integer  "topic_id", :default => 1
     t.integer  "user_id"
     t.string   "name"
     t.text     "content"
     t.string   "media_link"
-    t.integer  "critera_count"
     t.integer  "status"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false

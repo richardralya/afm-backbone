@@ -11,10 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :topic_id %>
-    <%= f.number_field :topic_id %>
-  </div>
+  <%= f.hidden_field :status, value: 1 %>
 
   <div class="field">
     <%= f.label :user_id %>
@@ -34,16 +31,6 @@
   <div class="field">
     <%= f.label :media_link %>
     <%= f.text_field :media_link %>
-  </div>
-
-  <div class="field">
-    <%= f.label :critera_count %>
-    <%= f.number_field :critera_count %>
-  </div>
-
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.number_field :status %>
   </div>
 
   <div class="actions">

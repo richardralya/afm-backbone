@@ -1,31 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Items</h1>
+<h1>Newsfeed</h1>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Name</th>
-      <th>Content</th>
-      <th>Media link</th>
-      <th>Critera count</th>
-      <th>Date created</th>
-      <th>Date modified</th>
-      <th>Status</th>
-      <th colspan="3"></th>
+      <th>Title</th>
+      <th>Summary</th>
+      <th>URL</th>
+      <th>Rank</th>
     </tr>
   </thead>
 
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= item.user_id %></td>
         <td><%= link_to item.name, item %></td>
         <td><%= item.content %></td>
         <td><%= item.media_link %></td>
-        <td><%= item.critera_count %></td>
-        <td><%= item.status %></td>
+		<td><%= item.ratings.sum(:rating) / item.ratings.count(:rating) %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= button_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -35,4 +28,3 @@
 
 <br>
 
-<%= link_to 'New Item', new_item_path %>

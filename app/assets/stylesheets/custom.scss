@@ -1,27 +1,19 @@
-.container {
-	width: 710px;
-}
-
 body {
-	background: #fff;
-
+	background: #ddd;
 	font-family: Helvetica, Arial, Verdana;
 }
 
 header {
-	padding-top: 20px;
+	padding-top: 0px;
 }
 
 header img {
-	padding: 1em;
-	background: #fff;
+	padding: 1em 1em 0 1em;
 }
 
 section {
-	margin-top: 1em;
-	font-size: 100%;
-	padding: 20px;
-	background: #fff;
+	font-size: 90%;
+	padding: 0px 20px 20px 20px;
 }
 
 section h1 {
@@ -33,11 +25,24 @@ footer {
 	text-align: left;
 }
 
+.container {
+    left: 50%;
+    margin: 0 auto;
+	width: 800px;
+	background: #fff;
+	border-radius: 12px;
+	padding: 10px 10px 50px 10px;
+}
+
 .deadlinks {
+    color: #fff;
 	font-size: 75%;
 	letter-spacing: 0.5px;
 	padding: 5px;
-	float: left;
+}
+
+footer .deadlinks {
+	float: right;
 }
 
 /* Links */
@@ -52,7 +57,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-footer .deadlinks a:link {
+.deadlinks a:link {
 	background-color: #999;
     text-decoration: none;
     color: #fff;
@@ -63,10 +68,10 @@ footer .deadlinks a:link {
     border-radius: 10px;
 }
 
-footer .deadlinks a:hover {
+.deadlinks a:hover {
 	background-color: #ed2062;
 }
 
-footer a:visited {
+.deadlinks a:visited {
 	color: #fff;
 }

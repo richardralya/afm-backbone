@@ -8,14 +8,10 @@ Rails.application.routes.draw do
   resources :channels
   resources :orgs
   resources :users
-  
-  get 'pages/home'
 
-  get 'pages/profile'
-
-  get 'items/Index'
-
-  get 'welcome_page/Welcome'
+  get '/home' => 'pages#home' 
+  get '/profile' => 'pages#profile'
+  get '/rate' => 'ratings#new'
   
   root 'welcome_page#welcome'
 end

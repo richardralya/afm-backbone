@@ -3,13 +3,8 @@
   <head>
     <title><%= @Title %></title>
     <%= csrf_meta_tags %>
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>	
-	<![endif]-->
-    <%= stylesheet_link_tag    'blueprint/screen', media: 'screen' %>
-    <%= stylesheet_link_tag    'blueprint/print', media: 'print' %>
-	<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-    <%= stylesheet_link_tag    'custom', media: 'screen' %>
+	
+    <%= render 'layouts/stylesheets' %>
   </head>
 
   <body>
@@ -26,10 +21,11 @@
 		  
 		  <footer>
 			  <nav class="round">
-				<div><%= link_to image_tag("logo-brick.png", :alt => "unsensational Logo", :class => "round"), '../' %></div>
-				<div class="deadlinks"><%= link_to "Manage Users", '/users' %></div>
-				<div class="deadlinks"><%= link_to "Manage Items", '/items' %></div>
+				<div ><%= link_to image_tag("logo-brick.png", :alt => "unsensational Logo", :class => "round"), '../' %></div>
 				<div class="deadlinks"><%= link_to "Manage Criteria", '/criteria' %></div>
+				<div class="deadlinks"><%= link_to "Manage Users", '/users' %></div>
+				<div class="deadlinks"><%= link_to "Newsfeed", '/items' %></div>
+				<div class="deadlinks"><%= link_to 'Submit an Article', new_item_path %></div>
 			  </nav>
 		  </footer>
 		  

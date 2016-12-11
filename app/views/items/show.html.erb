@@ -1,39 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Topic:</strong>
-  <%= @item.topic_id %>
+  <h1><%= @item.name %> [<%= @item.id %>]</h1>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @item.user_id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
-
-<p>
-  <strong>Content:</strong>
+  <strong>Summary:</strong>
   <%= @item.content %>
 </p>
 
 <p>
-  <strong>Media link:</strong>
+  <strong>URL:</strong>
   <%= @item.media_link %>
-</p>
+</p> 
 
 <p>
-  <strong>Critera count:</strong>
-  <%= @item.critera_count %>
+  <em>contributed by: <%= @item.user.name %></em>  
 </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @item.status %>
-</p>
+<br>
 
+<% @item.criteria.each do |criterium| %>
+  <p><b><%= criterium.name.upcase %>: </b>
+	  <%= criterium.ratings.sum(:rating) / criterium.ratings.count(:rating)%> (<%= criterium.ratings.sum(:rating) %>/<%= criterium.ratings.count(:rating) %>)
+  </p>
+</tr>
+<% end %>
+
+<%= button_to 'Rate This!' %>
+
+<br><br>
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
