@@ -1,5 +1,5 @@
-<h1>Now Rating "<%= Item.find(@item_id).name %>"</h1>
-<h3><em>by <%= Item.find(@item_id).author %></em></h3>
+<h1>Now Rating "<%= @item.name %>"</h1>
+<h3><em>by <%= @item.author %></em></h3>
 
   <% if rating.errors.any? %>
     <div id="error_explanation">

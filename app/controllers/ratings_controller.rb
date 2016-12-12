@@ -16,6 +16,7 @@ class RatingsController < ApplicationController
   def new
     @rating = Rating.new
     @item_id = params[:item]
+    @item = Item.find( @item_id )
     @criteria = Item.find(@item_id).criteria
     
   end
