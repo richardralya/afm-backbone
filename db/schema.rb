@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(version: 20161212000616) do
     t.string   "name"
     t.text     "content"
     t.string   "media_link"
+    t.string     "author"
     t.integer  "status"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.text     "author"
   end
 
   create_table "orgs", force: :cascade do |t|
