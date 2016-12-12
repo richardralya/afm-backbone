@@ -29,7 +29,9 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
-
+    @item.status = 1
+    @item.topic_id = 1
+    
     respond_to do |format|
       if @item.save
         
