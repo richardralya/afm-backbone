@@ -18,7 +18,7 @@
         <td><%= link_to item.name, item %></td>
         <td><%= item.content %></td>
         <td><%= item.media_link %></td>
-		<td><%= item.ratings.sum(:rating) / item.ratings.count(:rating) %></td>
+		<td><%= item.ratings.count(:rating) > 0 ? ( item.ratings.sum(:rating) / item.ratings.count(:rating) ) : 0 %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= button_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

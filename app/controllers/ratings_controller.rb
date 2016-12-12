@@ -15,6 +15,9 @@ class RatingsController < ApplicationController
   # GET /ratings/new
   def new
     @rating = Rating.new
+    @item_id = params[:item]
+    @criteria = Item.find(@item_id).criteria
+    
   end
 
   # GET /ratings/1/edit
@@ -28,7 +31,7 @@ class RatingsController < ApplicationController
 
     respond_to do |format|
       if @rating.save
-        format.html { redirect_to @rating, notice: 'Rating was successfully created.' }
+        format.html { redirect_to :back, notice: 'Rating was successfully created.' }
         format.json { render :show, status: :created, location: @rating }
       else
         format.html { render :new }

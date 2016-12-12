@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy, :rate]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
   # GET /items.json
@@ -64,21 +64,6 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  
-# =============================== NEW =====================================  
-  # RATE /items/1
-  # RATE /items/1.json
-  def rate
- #   @item.rate
-#    respond_to do |format|
-      format.html { redirect_to items_path, notice: 'Item was successfully rated.' }
- #     format.json { head :no_content }
- #   end
-  end
-  
-# =========================================================================
-
 
 
   private
@@ -89,6 +74,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:topic_id, :user_id, :name, :content, :media_link, :status)
+      params.require(:item).permit(:topic_id, :user_id, :name, :content, :media_link, :author, :status)
     end
 end

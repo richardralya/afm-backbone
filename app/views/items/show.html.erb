@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h1><%= @item.name %> [<%= @item.id %>]</h1>
+  <h1><%= @item.name %></h1>
 </p>
 
 <p>
@@ -15,19 +15,24 @@
 </p> 
 
 <p>
-  <em>contributed by: <%= @item.user.name %></em>  
+  <em>Author: <%= @item.author %></em>  
+</p>
+
+<p>
+  <em>Contributed by: <%= @item.user.name %></em>  
 </p>
 
 <br>
-
+ 
 <% @item.criteria.each do |criterium| %>
   <p><b><%= criterium.name.upcase %>: </b>
-	  <%= criterium.ratings.sum(:rating) / criterium.ratings.count(:rating)%> (<%= criterium.ratings.sum(:rating) %>/<%= criterium.ratings.count(:rating) %>)
+	  <%= criterium.ratings.count(:rating) > 0 ? ( criterium.ratings.sum(:rating) / criterium.ratings.count(:rating) ) : 0 %> (<%= criterium.ratings.sum(:rating) %>/<%= criterium.ratings.count(:rating) %>)
   </p>
 </tr>
 <% end %>
 
-<%= button_to 'Rate This!' %>
+
+<%= link_to 'Rate This!', new_rating_path(:item => @item) %>
 
 <br><br>
 <%= link_to 'Edit', edit_item_path(@item) %> |

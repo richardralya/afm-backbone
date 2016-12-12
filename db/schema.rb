@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122183046) do
+ActiveRecord::Schema.define(version: 20161212000616) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "name"
@@ -34,18 +34,19 @@ ActiveRecord::Schema.define(version: 20161122183046) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.integer  "topic_id", :default => 1
+    t.integer  "topic_id",   default: 1
     t.integer  "user_id"
     t.string   "name"
     t.text     "content"
     t.string   "media_link"
     t.integer  "status"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.text     "author"
   end
 
   create_table "orgs", force: :cascade do |t|
-    t.integer  "channel_id"
+    t.integer  "channel_id", null: false
     t.string   "name"
     t.text     "address"
     t.string   "plan"
@@ -61,8 +62,8 @@ ActiveRecord::Schema.define(version: 20161122183046) do
     t.decimal  "user_rank"
     t.integer  "rating"
     t.integer  "status"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "topics", force: :cascade do |t|
