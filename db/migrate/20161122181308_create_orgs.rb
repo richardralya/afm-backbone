@@ -4,7 +4,6 @@ class CreateOrgs < ActiveRecord::Migration[5.0]
       t.integer :channel_id
       t.string :name
       t.text :address
-      t.datetime :register_date
       t.string :plan
       t.integer :status
 

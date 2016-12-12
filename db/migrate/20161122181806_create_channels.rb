@@ -5,8 +5,6 @@ class CreateChannels < ActiveRecord::Migration[5.0]
       t.text :content
       t.text :ui_content
       t.boolean :is_private
-      t.datetime :date_modified
-      t.datetime :date_created
       t.integer :user_id
       t.integer :status
 

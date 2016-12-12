@@ -12,8 +12,6 @@ class CreateTopics < ActiveRecord::Migration[5.0]
       t.datetime :start_date
       t.datetime :end_date
       t.datetime :deadline_date
-      t.datetime :date_created
-      t.datetime :date_modified
       t.integer :status
 
       t.timestamps

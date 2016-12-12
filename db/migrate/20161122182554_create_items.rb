@@ -6,9 +6,7 @@ class CreateItems < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :content
       t.string :media_link
-      t.integer :critera_count
-      t.datetime :date_created
-      t.datetime :date_modified
+      t.string, :author
       t.integer :status
 
       t.timestamps

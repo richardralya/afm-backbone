@@ -12,9 +12,9 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.decimal :rank_boost
       t.integer :org_id
       t.integer :status
-      t.datetime :date_created
 
       t.timestamps
     end
   end
 end
+
