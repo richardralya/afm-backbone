@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20161212000616) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.integer  "topic_id",   default: 1
+    t.integer  "topic_id"
     t.integer  "user_id"
     t.string   "name"
     t.text     "content"
