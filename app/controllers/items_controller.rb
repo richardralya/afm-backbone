@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @Title = "NEW unsensational! link"
+    @Title = "NEW unsensational! Article"
     @item = Item.new
   end
 
@@ -32,6 +32,37 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
+        
+        @item.criteria.new
+        @item.criteria.last.name = "Truthfulness"
+        @item.criteria.last.status = 1
+        @item.criteria.last.cardinality = 1
+        @item.criteria.last.created_at = Date.today
+        @item.criteria.last.updated_at = Date.today
+        
+        @item.criteria.new
+        @item.criteria.last.name = "Unbiased"
+        @item.criteria.last.status = 1
+        @item.criteria.last.cardinality = 2
+        @item.criteria.last.created_at = Date.today
+        @item.criteria.last.updated_at = Date.today
+        
+        @item.criteria.new
+        @item.criteria.last.name = "Unsensational"
+        @item.criteria.last.status = 1
+        @item.criteria.last.cardinality = 3
+        @item.criteria.last.created_at = Date.today
+        @item.criteria.last.updated_at = Date.today
+        
+        @item.criteria.new
+        @item.criteria.last.name = "Inspiring"
+        @item.criteria.last.status = 1
+        @item.criteria.last.cardinality = 4
+        @item.criteria.last.created_at = Date.today
+        @item.criteria.last.updated_at = Date.today
+        
+        @item.save
+        
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @item }
       else
