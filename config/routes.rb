@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   resources :criteria
   resources :view_statuses
   resources :items
-  resources :topics
-  resources :channels
-  resources :orgs
+ # resources :topics
+ # resources :channels
+ # resources :orgs
   resources :users
 
   get '/home' => 'pages#home' 
