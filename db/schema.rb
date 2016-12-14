@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212000616) do
+ActiveRecord::Schema.define(version: 20161214092114) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "name"
@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(version: 20161212000616) do
     t.string   "name"
     t.text     "content"
     t.string   "media_link"
-    t.string     "author"
     t.integer  "status"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "author"
   end
 
   create_table "orgs", force: :cascade do |t|
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 20161212000616) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "encrypted_password"
     t.string   "language"
     t.string   "timezone"
     t.string   "auth_type"
@@ -95,8 +96,9 @@ ActiveRecord::Schema.define(version: 20161212000616) do
     t.decimal  "rank_boost"
     t.integer  "org_id"
     t.integer  "status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "salt"
   end
 
   create_table "view_statuses", force: :cascade do |t|

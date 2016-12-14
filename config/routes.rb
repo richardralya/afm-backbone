@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   resources :ratings
   resources :criteria
   resources :view_statuses
@@ -8,7 +10,14 @@ Rails.application.routes.draw do
  # resources :channels
  # resources :orgs
   resources :users
+  resources :sessions
 
+  get '/signup' => 'users#new' 
+  get '/signin' => 'sessions#new' 
+  post '/login' => 'sessions#create' 
+  get '/signout' => 'sessions#destroy' 
+  
+  
   get '/home' => 'pages#home' 
   get '/profile' => 'pages#profile'
   get '/rate' => 'ratings#new'

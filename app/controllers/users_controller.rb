@@ -27,7 +27,14 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
+      # Set Defaults
+        @user.org_id = 1
+        @user.status = 1
+        @user.auth_type = "userpass"
+        @user.language = "en"
+        @user.timezone = -10
+        
+      if @user.save        
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -69,6 +76,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :language, :timezone, :auth_type, :account_status, :login_status, :organic_rank, :rank_boost, :org_id, :status, :date_created)
+      params.require(:user).permit(:name, :email, :encrypted_password, :language, :timezone, :auth_type, :account_status, :login_status, :organic_rank, :rank_boost, :org_id, :status)
     end
 end

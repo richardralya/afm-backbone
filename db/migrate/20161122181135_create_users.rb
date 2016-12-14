@@ -3,6 +3,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     create_table :users do |t|
       t.string :name
       t.string :email
+      t.string :encrypted_password
       t.string :language
       t.string :timezone
       t.string :auth_type
